@@ -23,7 +23,6 @@ export default function Form({
   useEffect(() => {
     setResponse(response);
   }, [response, setResponse]);
-  console.log(response);
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -90,10 +89,11 @@ export default function Form({
         />
         <input
           type="submit"
-          className="w-full font-bold text-white rounded-full px-3 py-2 bg-purple-800 active:bg-purple-600"
+          className="w-full font-bold text-white rounded-full px-3 py-2 bg-purple-800 active:bg-purple-600 "
           disabled={isLoading}
+          value={isLoading && !error ? "Loading..." : "Submit"}
         />
-        {isLoading && !error && "Loading..."}
+
         {error && <Error value={error} />}
       </form>
     </div>

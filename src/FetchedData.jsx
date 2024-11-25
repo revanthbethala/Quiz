@@ -72,5 +72,5 @@ function Questions({ results, setCount, size, count, correctAnswers }) {
          </div>
          {count === size - 1 && <Result correctAnswers={correctAnswers} chosenOptions={chosenOptions} />}
 
-      </div >);
+      </div >)
 }
